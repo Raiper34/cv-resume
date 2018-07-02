@@ -1,0 +1,218 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+%\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={Filip Gulan CV},
+    pdfauthor={Filip Gulan},
+    pdfsubject={Filip Gulan CV},
+    pdfkeywords={filip gulan, cv, computer engineer},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.5cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Filip}{Gulan}
+      {Computer Engineer}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{Address}
+    Hruba Strana 1556,
+    916 11 Bzince pod Javorinou, Slovakia
+    ~
+  \section{Tel}
+    +421 907 321 686
+    +420 735 897 947
+    ~
+  \section{Mail}
+    \href{mailto:raipergm34@gmail.com}{\textbf{raipergm34@}\\gmail.com}
+    ~
+  \section{Web \& Git}
+    \href{http://www.gulan.sk}{gulan.sk}
+    \href{https://github.com/raiper34}{github.com/raiper34}
+    \href{https://www.linkedin.com/in/filipgulan}{linkedin.com/in/filipgulan}
+    ~
+   \section{Languages}
+   Experienced
+    \smartdiagram[bubble diagram]{
+        \textbf{Code},
+        \textbf{HTML},
+        \textbf{CSS}\\\textbf{SCSS},
+        \textbf{Javascript}\\\textbf{Typescript},
+        \textbf{SQL},
+        \textbf{PHP}
+    }
+    Also know..
+    \smartdiagram[bubble diagram]{
+        \textbf{Code},
+        \textbf{Java},
+        \textbf{C}\\\textbf{C\#}\\\textbf{C++},
+        \textbf{Python},
+        \textbf{UML},
+        \textbf{Bash},
+        \textbf{LaTex}
+    }
+    ~
+    \section{Frameworks}
+    \smartdiagram[bubble diagram]{
+        \textbf{Frame},
+        \textbf{Phaser},
+        \textbf{Laravel},
+        \textbf{Angular}\\\textbf{Ionic},
+        \textbf{Nette}
+    }
+    ~
+\end{aside}
+~
+\section{Experience}
+\begin{entrylist}
+ \entry
+    {04/17 - 05/18}
+    {Frontend Developer}
+    {FlowUp, Czech Republic}
+    {I developed digital card management system, cryptocurrency payment gateway,  bottle designer.  I used mainly Typescript Angular 4, SCSS CSS preprocesor, NGRX  reactive architecture , RESTful API, Firebase database and authentication.\\}
+\entry
+    {03/16 - 03/17}
+    {PHP \& Android Developer}
+    {Monit, Czech Republic}
+    {I developed new modules for internal marketing project (e-mailing system, digital display management system) and external customers projects (hairdressers management system, signposts...). I used mainly Nette PHP framework, MySQL database, Javascript Jquery and template based on Bootstrap HTML and CSS framework.\\}
+\end{entrylist}
+
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2016 - 2018}
+    {Bioinformatics and biocomputing}
+    {Brno University of Technology, Czech Republic}
+    {Master's Degree \\
+    Title of the Thesis:  Detecton, localization and determination of chronic wounds\\
+    About Thesis: The aim of thesis is to design and implement a multiplatform application for detection, localization and determination of the extent of chronic wounds. The application is intended to assist nurses, doctors and healthcare assistants to monitor and evaluate chronic wounds in the course of treatment. The application is based on the Typescript programming language, on the Ionic hybrid application framework and on the Electron desktop application framework. Chronic wound assessment runs on the server-side where the Python programming language is used. The Flask application framework is used for the RESTful application interface and the OpenCV library is used for image processing.\\}
+  \entry
+    {2013 - 2016}
+    {Information Technology}
+    {Brno University of Technology, Czech Republic}
+    {Bachelor's Degree \\
+    Title of the Thesis: Web Platform for Game Development\\
+    About Thesis: The aim of thesis is to design and implement modern web platform for creating games. The web platform is designed both for HTML5 / Javascript games developers and for players of these games. The work also includes a web portal and API that makes services of Web portal accessible for games developers. On server-side this platform is based on scripting language PHP using Nette framework. On the client side is used HTML, CSS, Javascript, and for the purpose of responsive design is used front-end framework Bootstrap. The game that demonstrates the API is written in JavaScript using the Phaser framework.\\}
+  \entry
+    {2009 - 2013}
+    {Information Technology}
+    {Grammar School of Milan Rastislav Stefanik, Slovakia}
+    {Graduation: Information Technology, Matematics, English, German, Slovak language.}
+\end{entrylist}
+
+\section{Certifications}
+\begin{entrylist}
+  \entry
+    {03/2018}
+    {Computer Vision Intro OpenCV3 in Python \& Machine Learning}
+    {Udemy}
+    {\emph{License UC-7K6YHYTJ}}
+  \entry
+    {08/2017}
+    {Productive coding with WebStorm}
+    {Udemy}
+    {\emph{License UC-S6OP3FTV}}
+  \entry
+    {06/2017}
+    {Git Complete: The definitive, step-by-step guide to Git}
+    {Udemy}
+    {\emph{License UC-MGHP7F21}}
+  \entry
+    {10/2016}
+    {The Complete Sass \& SCSS Course}
+    {Udemy}
+    {\emph{License UC-SJSJJTI1}}
+  \entry
+    {08/2016}
+    {The Complete Mobile Game Development Course with Phaser}
+    {Udemy}
+    {\emph{License UC-A5FWWQKP}}
+  \entry
+    {07/2016}
+    {Learn and Understand AngularJS}
+    {Udemy}
+    {\emph{License UC-NB6Z8QAK}}
+\end{entrylist}
+
+\begin{aside}
+\section{OS Preference}
+    \textbf{Linux}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/3stars.png}
+    ~
+\section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Filip},
+        \textbf{Creative},
+        \textbf{Initiative},
+        \textbf{Organize},
+        \textbf{Innovative},
+        \textbf{Logical}
+    }
+    ~
+\section{Languages}
+    \textbf{Slovak}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Czech}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{English}\includegraphics[scale=0.40]{img/3stars.png}
+    \textbf{German}\includegraphics[scale=0.40]{img/2stars.png}
+    ~
+\end{aside}
+
+\section{Other Info}
+\textbf{Hobbies:}\\
+\emph{Swimming, In-line, Psychology, Books, Movies, Games}
+\\
+\begin{flushleft}
+\emph{\today}
+\end{flushleft}
+\begin{flushright}
+\emph{Filip Gulan}
+\end{flushright}
+
+\end{document}
